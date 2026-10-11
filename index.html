@@ -28,7 +28,7 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Accomplishments</a></li>
+                <li><a href="#accomplishments-section">Accomplishments</a></li>
                 <li><a href="#blog-section">Blog</a></li>
                 <li><a href="#" class="nav-cta" onclick="toggleContactModal(true); return false;">Let's Talk</a></li>
             </ul>
@@ -132,23 +132,27 @@
     </section>
 
     <!-- NEW SECTION: IMAGERY COLLECTION CAROUSEL -->
-    <section class="collection-carousel">
-        <div class="container carousel-header">
-            <div>
-                <p class="section-tagline">Curated Looks</p>
-                <h2>Accomplished Projects</h2>
-            </div>
-            <!-- Sleek Minimalist Navigation Buttons -->
-            <div class="carousel-nav">
-                <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">&#8592;</button>
-                <button class="nav-btn next-btn" onclick="scrollCarousel(1)">&#8594;</button>
-            </div>
+    <section id="accomplishments-section" class="collection-carousel">
+    
+    <div class="carousel-header">
+        <!-- LEFT BLOCK: Heading Text -->
+        <div class="header-text-group">
+            <p class="section-tagline">Curated Looks</p>
+            <h2 class="section-heading-title">Accomplished Projects</h2>
         </div>
+        
+        <!-- RIGHT BLOCK: Navigation Arrows -->
+        <div class="carousel-nav">
+            <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">&#8592;</button>
+            <button class="nav-btn next-btn" onclick="scrollCarousel(1)">&#8594;</button>
+        </div>
+    </div>
 
         <!-- ==========================================================================
            UPDATED COMPONENT: ROUTED IMAGERY COLLECTION CAROUSEL
         =============================================================================== -->
         <div class="carousel-track" id="collectionTrack">
+
             <!-- Card 1 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->

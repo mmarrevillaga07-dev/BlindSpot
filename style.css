@@ -264,16 +264,25 @@ body {
     overflow: visible !important; /* Allows card shadows to float freely */
 }
 
-.carousel-header {
+.carousel-header,
+.container.carousel-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important; /* Forces title left and arrows right */
+    align-items: flex-end !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto 40px auto !important; /* Centers the header row and adds bottom spacing */
+    padding: 0 40px !important; /* Adds safety margins so text never touches the screen edge */
+    box-sizing: border-box !important;
+}
+
+/* Fixes the layout wrapper inside your header to prevent vertical stacking */
+.carousel-header > div:first-child {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 40px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 40px;
-    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .section-tagline {
@@ -318,22 +327,27 @@ body {
     background-color: rgba(255, 158, 125, 0.05);
 }
 
+/* ==========================================================================
+   CAROUSEL TRACK ALIGNMENT REPAIR
+   ========================================================================== */
 .carousel-track {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    gap: 16px; 
-    overflow-x: auto;
-    padding: 30px 40px; 
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    box-sizing: border-box;
+    max-width: 1200px !important; /* Locks down the total viewport boundary to match your upper rows */
+    width: 100% !important;
+    margin: 0 auto !important; /* Centers the entire carousel gallery grid row on the page */
+    padding: 30px 40px !important; /* 40px left/right padding perfectly aligns cards with the header margin */
+    display: flex !important;
+    gap: 16px !important; 
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+    box-sizing: border-box !important; /* Forces your margins to stay calculated inside the box boundaries */
 }
 
+/* Hides native scrollbar tracks across Webkit browser rendering engines */
 .carousel-track::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
+
 
 .collection-card {
     /* Math: Standardizes a clean, uncrushable horizontal footprint */
