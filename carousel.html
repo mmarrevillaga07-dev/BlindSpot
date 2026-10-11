@@ -99,7 +99,7 @@
     </div>
 
     <!-- Direct link to Order form -->
-    <a href="#" id="orderBtnLink" class="order-btn">Create Order Now!</a>
+    <a href="#" id="orderBtnLink" class="order-btn">I want this!</a>
     
     <a href="javascript:window.close();" class="back-btn">← Close Gallery Tab</a>
   </div>
@@ -107,35 +107,35 @@
 <script>
   // 1. Data mapping for Looks 1 through 10 (Update filenames to match yours)
   const productData = {
-    "1": { title: "Casual Lace Ruffle Neck Draped Mini", desc: "Pattern:Plain, Style:Casual, Dress Type:A Line, Plus Size:No, Material:Polyester, Composition:100%Polyester, Fit Type:Regular Fit, Sheer:No, Stretch:Non-stretch",
-    images: ["assets/carousel-image-1a.jpg", "assets/carousel-image-1b.jpg", "assets/carousel-image-1c.jpg", "assets/carousel-image-1d.jpg", "assets/carousel-image-1e.jpg", "assets/carousel-image-1f.jpg", "assets/carousel-image-1g.jpg", "assets/carousel-image-1h.jpg"] },
+    "1": { title: "TaskFlow", desc: "Description",
+     images: ["assets/carousel-image-1a.jpg", "assets/carousel-image-1b.jpg", "assets/carousel-image-1c.jpg"] },
 
-    "2": { title: "Casual Button Blazer", desc: "Pattern: Plain, Style: Casual, Plus Size: No, Material: Polyester, Composition: 100%Polyester, Fit Type: Regular Fit, Sheer: No, Stretch: Non-stretch",
-     images: ["assets/carousel-image-2a.jpg", "assets/carousel-image-2b.jpg", "assets/carousel-image-2c.jpg", "assets/carousel-image-2d.jpg", "assets/carousel-image-2e.jpg", "assets/carousel-image-2f.jpg", "assets/carousel-image-2g.jpg", "assets/carousel-image-2h.jpg"] },
+    "2": { title: "TaskGuru", desc: "Description",
+     images: ["assets/carousel-image-2a.jpg", "assets/carousel-image-2b.jpg", "assets/carousel-image-2c.jpg"] },
 
-    "3": { title: "Loose and Slim Casual Blouse", desc: "Crafted from brand new, skin-friendly fabric, this shirt offers a smooth texture. Its simple yet fashionable design ensures it never goes out of style. The fabric feels gentle on your skin, enhancing your overall experience.",
-     images: ["assets/carousel-image-3a.jpg", "assets/carousel-image-3b.jpg", "assets/carousel-image-3c.jpg", "assets/carousel-image-3d.jpg", "assets/carousel-image-3e.jpg", "assets/carousel-image-3f.jpg", "assets/carousel-image-3g.jpg", "assets/carousel-image-3h.jpg"] },
+    "3": { title: "TABULA", desc: "Description",
+     images: ["assets/carousel-image-3a.jpg", "assets/carousel-image-3b.jpg", "assets/carousel-image-3c.jpg"] },
 
-    "4": { title: "Party Red Appliques Asymmetrical Top", desc: "Style:Casual, Plus Size:No, Material:Polyester, Composition:100%Polyester, Fit Type:Slim Fit, Sheer:No, Stretch:Non-stretch",
-     images: ["assets/carousel-image-4a.jpg", "assets/carousel-image-4b.jpg", "assets/carousel-image-4c.jpg", "assets/carousel-image-4d.jpg", "assets/carousel-image-4e.jpg", "assets/carousel-image-4f.jpg", "assets/carousel-image-4g.jpg", "assets/carousel-image-4h.jpg"] },
+    "4": { title: "TRUSSWORK", desc: "Description",
+     images: ["assets/carousel-image-4a.jpg", "assets/carousel-image-4b.jpg", "assets/carousel-image-4c.jpg"] },
 
-    "5": { title: "Women Casual Classic & Versatile Black Top", desc: "Pattern:Plain, Style:Casual, Plus Size:No, Material:Polyester, Composition:95% Polyester + 5% Spandex, Fit Type:Slim Fit, Sheer:No, Stretch:Medium-Stretch",
-     images: ["assets/carousel-image-5a.jpg", "assets/carousel-image-5b.jpg", "assets/carousel-image-5c.jpg", "assets/carousel-image-5d.jpg", "assets/carousel-image-5e.jpg", "assets/carousel-image-5f.jpg", "assets/carousel-image-5g.jpg", "assets/carousel-image-5h.jpg"] },
+    "5": { title: "LogicMinds.", desc: "Description",
+     images: ["assets/carousel-image-5a.jpg", "assets/carousel-image-5b.jpg", "assets/carousel-image-5c.jpg"] },
 
-    "6": { title: "Super Comfy Sleepwear Terno", desc: "Crafted from soft, breathable cotton for ultimate comfort. The relaxed fit ensures ease of movement, while the elastic waistband provides a secure yet gentle hold. Perfect for lounging or sleeping, this set combines style and comfort effortlessly.",
-     images: ["assets/carousel-image-6a.jpg", "assets/carousel-image-6b.jpg", "assets/carousel-image-6c.jpg", "assets/carousel-image-6d.jpg", "assets/carousel-image-6e.jpg", "assets/carousel-image-6f.jpg", "assets/carousel-image-6g.jpg", "assets/carousel-image-6h.jpg"] },
+    "6": { title: "TUVEES BuyHub", desc: "Description",
+     images: ["assets/carousel-image-6a.jpg", "assets/carousel-image-6b.jpg", "assets/carousel-image-6c.jpg"] },
 
-    "7": { title: "Halter Shorts Pajamas Set", desc: "DemiBra Summer sexy halter shorts pajamas set for Women Sweet Camisole Shorts 2-piece Set.",
-     images: ["assets/carousel-image-7a.jpg", "assets/carousel-image-7b.jpg", "assets/carousel-image-7c.jpg", "assets/carousel-image-7d.jpg", "assets/carousel-image-7e.jpg", "assets/carousel-image-7f.jpg", "assets/carousel-image-7g.jpg", "assets/carousel-image-7h.jpg"] },
+    "7": { title: "PEACHEE", desc: "Description",
+     images: ["assets/carousel-image-7a.jpg", "assets/carousel-image-7b.jpg", "assets/carousel-image-7c.jpg"] },
 
-    "8": { title: "Look 8", desc: "Description for Product 8",
-     images: ["assets/carousel-image-8a.jpg", "assets/carousel-image-8b.jpg", "assets/carousel-image-8c.jpg", "assets/carousel-image-8d.jpg", "assets/carousel-image-8e.jpg", "assets/carousel-image-8f.jpg", "assets/carousel-image-8g.jpg", "assets/carousel-image-8h.jpg"] },
+    "8": { title: "BlindSpot", desc: "Description",
+     images: ["assets/carousel-image-8a.jpg", "assets/carousel-image-8b.jpg", "assets/carousel-image-8c.jpg"] },
 
-    "9": { title: "Look 9", desc: "Description for Product 9",
-     images: ["assets/carousel-image-9a.jpg", "assets/carousel-image-9b.jpg", "assets/carousel-image-9c.jpg", "assets/carousel-image-9d.jpg", "assets/carousel-image-9e.jpg", "assets/carousel-image-9f.jpg", "assets/carousel-image-9g.jpg", "assets/carousel-image-9h.jpg"] },
+    "9": { title: "Look 9", desc: "Description",
+     images: ["assets/carousel-image-9a.jpg", "assets/carousel-image-9b.jpg", "assets/carousel-image-9c.jpg"] },
 
-    "10": { title: "Look 10", desc: "Cashmere Loungewear Set",
-     images: ["assets/carousel-image-10a.jpg", "assets/carousel-image-10b.jpg", "assets/carousel-image-10c.jpg", "assets/carousel-image-10d.jpg", "assets/carousel-image-10e.jpg", "assets/carousel-image-10f.jpg", "assets/carousel-image-10g.jpg", "assets/carousel-image-10h.jpg"] }
+    "10": { title: "Look 10", desc: "Description",
+     images: ["assets/carousel-image-10a.jpg", "assets/carousel-image-10b.jpg", "assets/carousel-image-10c.jpg"] }
 
   };
 

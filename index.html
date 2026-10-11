@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEACHEE - New Collection</title>
+    <title>BlindSpot - Beyond the surface</title>
     <!-- Link to external style sheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Premium Fonts for a high-end fashion/boutique feel -->
@@ -19,19 +19,18 @@
             <div class="brand-block" style="display: flex; flex-direction: column; gap: 6px;">
                 <div class="logo-row" style="display: flex; align-items: center; gap: 14px;">
                 <!-- Increased to 64px for clear visibility and brand recognition -->
-                    <img src="logo.png" alt="PEACHEE Icon" style="width: 64px; height: 64px; object-fit: contain; flex-shrink: 0;">
-                    <a href="#" class="brand-logo" style="margin: 0; font-size: 32px; font-weight: bold; text-decoration: none; color: #FFF; line-height: 1;">PEACHEE</a>
+                <a href="#" class="brand-logo" style="margin: 0; font-size: 32px; font-weight: bold; text-decoration: none; color: #FFF; line-height: 1;">BlindSpot</a>
                 </div>
                 <!-- Adjusted padding to visually line up the subline text with the main text -->
-                <p class="brand-subline" style="margin: 0; padding-left: 78px;">Conscious Luxury For Everyday Life.</p>
+                <p class="brand-subline" style="margin: 0; padding-left: 78px;">Beyond the surface.</p>
             </div>
 
             <ul class="nav-links">
-                <li><a href="#">Tops</a></li>
-                <li><a href="#">Bottoms</a></li>
-                <li><a href="#">Full-Body</a></li>
-                <li><a href="#">Lingerie & Nightwear</a></li>
-                <li><a href="#" class="nav-cta">New Arrivals</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Accomplishments</a></li>
+                <li><a href="#blog-section">Blog</a></li>
+                <li><a href="#" class="nav-cta" onclick="toggleContactModal(true); return false;">Let's Talk</a></li>
             </ul>
         </div>
     </nav>
@@ -40,25 +39,25 @@
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-text">
-                <p class="tagline">Peachee — Masterpieces</p>
-                <h1>Unapologetically<br>simple.<br></h1>
-                <p class="hero-subtext">Designed with intent. Made to endure.</p>
+                <p class="tagline">HELLO, MY NAME IS</p>
+                <h1>Marvin<br>Arrevillaga<br></h1>
+                <p class="hero-subtext">Customer Success Strategist and a Freelancer</p>
             </div>
             <div class="hero-image">
                 <!-- High-fashion placeholder asset matching the clothes rail style -->
-                <img src="https://img.magnific.com/free-photo/charming-lady-fashionable-blouse-trousers-takes-notes-tablet-girl-posing-background-dresses_197531-17619.jpg" class="peachee-shadow" alt="PEACHEE Premium Minimalist Fashion">
+                <img src="assets/hero-image1.jpg" class="blindspot-shadow" alt="BlindSpot. Beyond the surface.">
             </div> 
         </div>
     </header>
 
-            <!-- ==========================================================================
-       NEW COMPONENT: E-COMMERCE PRODUCT DISPLAY GRID
-       ========================================================================== -->
+        <!-- ==============================================================================
+        NEW COMPONENT: E-COMMERCE PRODUCT DISPLAY GRID
+        =============================================================================== -->
     <section id="collection" class="product-grid-section">
         <div class="container">
             <div class="grid-header">
-                <p class="section-tagline">Shop the Essentials</p>
-                <h2>New Arrivals</h2>
+                <p class="section-tagline">HIGHLIGHTS</p>
+                <h2>SERVICES</h2>
             </div>
             
             <div class="products-matrix">
@@ -66,17 +65,11 @@
                 <div class="product-card">
                     <!-- Replace the href below with your external gallery file or retailer affiliate link -->
                     <a href="signature-gallery-1.html" target="_blank" class="flash-wrapper">
-                        <img src="assets/signature-image-1.jpg" class="peachee-shadow" alt="Women Casual Pocket Belted Dress">
-                        <span class="quick-add-overlay">View Images &#8594;</span>
+                        <img src="assets/signature-image-1.jpg" class="blindspot-shadow" alt="SaaS Offers">
+                        <span class="quick-add-overlay">View Content &#8594;</span>
                     </a>
                     <div class="product-info">
-                        <h3 class="product-title">Women Casual Pocket Belted Dress</h3>
-                        <p class="product-price">$6.99</p>
-                        <div class="color-swatches">
-                            <span class="swatch swatch-active" style="background-color: #3A3D40;"></span>
-                            <span class="swatch" style="background-color: #E2E8F0;"></span>
-                            <span class="swatch" style="background-color: #242E28;"></span>
-                        </div>
+                        <h3 class="product-title">SaaS Offers</h3>   
                     </div>
                 </div>
 
@@ -84,16 +77,11 @@
                 <div class="product-card">
                     <!-- Replace the href below with your external gallery file or retailer affiliate link -->
                     <a href="signature-gallery-2.html" target="_blank" class="flash-wrapper">
-                        <img src="assets/signature-image-2.jpg" class="peachee-shadow" alt="Button Colorblock Dress">
-                        <span class="quick-add-overlay">View Images &#8594;</span>
+                        <img src="assets/signature-image-2.jpg" class="blindspot-shadow" alt="CxHUB">
+                        <span class="quick-add-overlay">View Content &#8594;</span>
                     </a>
                     <div class="product-info">
-                        <h3 class="product-title">Button Colorblock Dress</h3>
-                        <p class="product-price">$12.99</p>
-                        <div class="color-swatches">
-                            <span class="swatch swatch-active" style="background-color: #202123;"></span>
-                            <span class="swatch" style="background-color: #A0AEC0;"></span>
-                        </div>
+                        <h3 class="product-title">CxHUB</h3>    
                     </div>
                 </div>
 
@@ -101,16 +89,11 @@
                 <div class="product-card">
                     <!-- Replace the href below with your external gallery file or retailer affiliate link -->
                     <a href="signature-gallery-3.html" target="_blank" class="flash-wrapper">
-                        <img src="assets/signature-image-3.jpg" class="peachee-shadow" alt="Geometric Casual Blouse">
-                        <span class="quick-add-overlay">View Images &#8594;</span>
+                        <img src="assets/signature-image-3.jpg" class="blindspot-shadow" alt="DropShipping">
+                        <span class="quick-add-overlay">View Content &#8594;</span>
                     </a>
                     <div class="product-info">
-                        <h3 class="product-title">Geometric Casual Blouse</h3>
-                        <p class="product-price">$7.99</p>
-                        <div class="color-swatches">
-                            <span class="swatch swatch-active" style="background-color: #C1A086;"></span>
-                            <span class="swatch" style="background-color: #202123;"></span>
-                        </div>
+                        <h3 class="product-title">Affiliate Marketing</h3>
                     </div>
                 </div>
 
@@ -118,17 +101,11 @@
                 <div class="product-card">
                     <!-- Replace the href below with your external gallery file or retailer affiliate link -->
                     <a href="signature-gallery-4.html" target="_blank" class="flash-wrapper">
-                        <img src="assets/signature-image-4.jpg" class="peachee-shadow" alt="Casual Jumpsuit">
-                        <span class="quick-add-overlay">View Images &#8594;</span>
+                        <img src="assets/signature-image-4.jpg" class="blindspot-shadow" alt="Affiliate Marketing">
+                        <span class="quick-add-overlay">View Content &#8594;</span>
                     </a>
                     <div class="product-info">
-                        <h3 class="product-title">Casual Jumpsuit</h3>
-                        <p class="product-price">$9.99</p>
-                        <div class="color-swatches">
-                            <span class="swatch swatch-active" style="background-color: #E2E8F0;"></span>
-                            <span class="swatch" style="background-color: #3A3D40;"></span>
-                            <span class="swatch" style="background-color: #FF9E7D;"></span>
-                        </div>
+                        <h3 class="product-title">Dropshipping</h3>   
                     </div>
                 </div>
             </div>
@@ -140,16 +117,16 @@
     <section class="values-bar">
         <div class="container values-grid">
             <div class="value-item">
-                <h3>Complimentary Delivery</h3>
-                <p>On all domestic and worldwide collection orders.</p>
+                <h3>Honesty & Authenticity</h3>
+                <p>On this blog, you will get an insider’s look at what it takes to scale SaaS platforms, run dropshipping stores, and optimize affiliate campaigns. I do not hide behind surface-level stats; I share the exact frameworks that work, the common pitfalls to avoid, and the real numbers behind my strategies.</p>
             </div>
             <div class="value-item">
-                <h3>Extended Returns</h3>
-                <p>Enjoy a polished 30-day return or exchange window.</p>
+                <h3>Generosity - Value before the Price</h3>
+                <p>The goal is to give you immediate, actionable blueprints that improve your marketing ROI and elevate your customer experience. You will find free, in-depth technical guides, software breakdowns, and customer support scripts designed to help you scale your business before you ever spend a dime here.</p>
             </div>
             <div class="value-item">
-                <h3>Secure Transactions</h3>
-                <p>Fully encrypted end-to-end checkout protection.</p>
+                <h3>Reliability & Consistency</h3>
+                <p>The digital landscape changes fast, but you can count on this page for steady, up-to-date industry insights and tested methodologies. Whether you are looking to fix a leaky sales funnel or train a support team, you will find consistent, deeply researched content and a direct line to my expertise whenever you drop a question in the comments.</p>
             </div>
         </div>
     </section>
@@ -159,7 +136,7 @@
         <div class="container carousel-header">
             <div>
                 <p class="section-tagline">Curated Looks</p>
-                <h2>Best Sellers Collection</h2>
+                <h2>Accomplished Projects</h2>
             </div>
             <!-- Sleek Minimalist Navigation Buttons -->
             <div class="carousel-nav">
@@ -176,100 +153,100 @@
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=1" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-1a.jpg" class="peachee-shadow" alt="Look 01">
+                    <img src="assets/carousel-image-1a.jpg" class="blindspot-shadow" alt="Look 01">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$7.99</span><p>Casual Lace Ruffle Neck Draped Mini</p></div>
+                <div class="card-meta"><span></span><p>TaskFlow</p></div>
             </div>
             
             <!-- Card 2 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=2" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-2a.jpg" class="peachee-shadow" alt="Look 02">
+                    <img src="assets/carousel-image-2a.jpg" class="blindspot-shadow" alt="Look 02">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$10.99</span><p>Casual Button Blazer</p></div>
+                <div class="card-meta"><span></span><p>TaskGuru</p></div>
             </div>
             
             <!-- Card 3 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=3" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-3a.jpg" class="peachee-shadow" alt="Look 03">
+                    <img src="assets/carousel-image-3a.jpg" class="blindspot-shadow" alt="Look 03">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$5.99</span><p>Loose and Slim Casual Blouse</p></div>
+                <div class="card-meta"><span></span><p>Tabula</p></div>
             </div>
             
             <!-- Card 4 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=4" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-4a.jpg" class="peachee-shadow" alt="Look 04">
+                    <img src="assets/carousel-image-4a.jpg" class="blindspot-shadow" alt="Look 04">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$7.99</span><p>Party Red Appliques Asymmetrical Top</p></div>
+                <div class="card-meta"><span></span><p>Trusswork</p></div>
             </div>
             
             <!-- Card 5 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=5" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-5a.jpg" class="peachee-shadow" alt="Look 05">
+                    <img src="assets/carousel-image-5a.jpg" class="blindspot-shadow" alt="Look 05">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$5.99</span><p>Women Casual Classic & Versatile Black Top</p></div>
+                <div class="card-meta"><span></span><p>LogicMinds.</p></div>
             </div>
             
             <!-- Card 6 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=6" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-6a.jpg" class="peachee-shadow" alt="Look 06">
+                    <img src="assets/carousel-image-6a.jpg" class="blindspot-shadow" alt="Look 06">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$2.99</span><p>Super Comfy Sleepwear Terno</p></div>
+                <div class="card-meta"><span></span><p>TUVEES BuyHub</p></div>
             </div>
             
             <!-- Card 7 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=7" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-7a.jpg" class="peachee-shadow" alt="Look 07">
+                    <img src="assets/carousel-image-7a.jpg" class="blindspot-shadow" alt="Look 07">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>$3.99</span><p>Halter Shorts Pajamas Set</p></div>
+                <div class="card-meta"><span></span><p>PEACHEE</p></div>
             </div>
             
             <!-- Card 8 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=8" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-8a.jpg" class="peachee-shadow" alt="Look 08">
+                    <img src="assets/carousel-image-8a.jpg" class="blindspot-shadow" alt="Look 08">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>Look 08</span><p>Woven Cotton Totebag</p></div>
+                <div class="card-meta"><span></span><p>BlindSpot</p></div>
             </div>
             
             <!-- Card 9 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=9" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-9a.jpg" class="peachee-shadow" alt="Look 09">
+                    <img src="assets/carousel-image-9a.jpg" class="blindspot-shadow" alt="Look 09">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>Look 09</span><p>Satin Evening Slip</p></div>
+                <div class="card-meta"><span>Look 09</span><p></p></div>
             </div>
             
             <!-- Card 10 -->
             <div class="collection-card">
                 <!-- Replace the href below with your external look/retailer link -->
                 <a href="carousel.html?id=10" target="_blank" class="flash-wrapper">
-                    <img src="assets/carousel-image-10a.jpg" class="peachee-shadow" alt="Look 10">
+                    <img src="assets/carousel-image-10a.jpg" class="blindspot-shadow" alt="Look 10">
                     <span class="quick-add-overlay">View Look &#8594;</span>
                 </a>
-                <div class="card-meta"><span>Look 10</span><p>Cashmere Loungewear Set</p></div>
+                <div class="card-meta"><span>Look 10</span><p></p></div>
             </div>
         </div>
     </section>
@@ -288,6 +265,97 @@
     </script>
 
     <!-- ==========================================================================
+   BLOG SECTION: FEATURED HIGHLIGHTS / INTERMEDIARY CONTENT
+   ========================================================================== -->
+    <section id="blog-section" class="highlight-section">
+        <div class="section-container">
+            <span class="section-tagline">FEATURED BLOGS</span>
+            <h2 class="section-heading">Tailored Strategies for High-Growth Ventures</h2>
+        
+            <div class="highlight-content-wrapper">
+            <!-- Left Side Element -->
+                <div class="highlight-block">
+                    <h3>SaaS & Product Scaling</h3>
+                    <p>We craft data-driven acquisition funnels designed to minimize user churn, maximize trial-to-paid conversions, and consistently drive sustainable Monthly Recurring Revenue (MRR) expansion.</p>
+                    <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-saas')">Read Full Article →</a>
+                </div>
+            
+            <!-- Right Side Element -->
+                <div class="highlight-block">
+                    <h3>Conversion Optimization</h3>
+                    <p>From dropshipping storefronts to complex marketing funnels, we run deep behavioral analytics to isolate drop-off zones and transform passive traffic into loyal buyers.</p>
+                    <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-conversion')">Read Full Article →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+    MODAL CARD PLATFORMS FOR FULL ARTICLES
+    ========================================================================== -->
+    <!-- Left Article Modal Layout -->
+    <div id="modal-saas" class="blog-modal-overlay">
+        <div class="blog-modal-card">
+            <button class="modal-close-btn" onclick="toggleModal('modal-saas')">✕</button>
+            <div class="modal-scroll-body">
+                <span class="modal-tagline">SaaS & Product Scaling</span>
+                <h2>Mastering Data-Driven Acquisition Funnels</h2>
+                <div class="modal-divider"></div>
+            
+                <p class="modal-lead">Building predictable growth patterns requires moving past baseline metrics and isolating accurate behavioral conversion metrics.</p>
+            
+                <p>To consistently scale Monthly Recurring Revenue (MRR), platforms must optimize the transition window between passive trial sign-ups and active, paid tiers. This is achieved by mapping out in-app milestone triggers—identifying exactly where a trial user experiences their first "aha" moment with your software product.</p>
+            
+                <p>By personalizing email follow-ups and tailoring onboarding walk-throughs to address specific drop-off friction points, you can dramatically lower acquisition overhead while sustaining authentic, long-term product-led expansion.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Article Modal Layout -->
+    <div id="modal-conversion" class="blog-modal-overlay">
+        <div class="blog-modal-card">
+            <button class="modal-close-btn" onclick="toggleModal('modal-conversion')">✕</button>
+            <div class="modal-scroll-body">
+                <span class="modal-tagline">Conversion Optimization</span>
+                <h2>Advanced Analytics for E-Commerce and Dropshipping</h2>
+                <div class="modal-divider"></div>
+            
+                <p class="modal-lead">High volumes of incoming store traffic mean absolutely nothing if your product pages cannot reliably convert visitors into customers.</p>
+            
+                <p>Isolating leaky zones inside your marketing funnel requires strict, cross-channel behavioral monitoring. Using user-session heatmaps and form-field drop-off tracking reveals precisely where checkout abandonment happens—whether it is driven by unexpected shipping rates, a complicated checkout form, or slow loading speeds on mobile layouts.</p>
+            
+                <p>Resolving these specific experience blockers will optimize your ad spend ROI, streamline your checkout process, and turn passive web traffic into a highly profitable digital storefront system.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function toggleModal(modalId) {
+        const targetModal = document.getElementById(modalId);
+        if (targetModal) {
+            targetModal.classList.toggle('is-active');
+        
+        /* Prevents the background webpage from scrolling behind the open card overlay */
+            if (targetModal.classList.contains('is-active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    }
+
+    /* Closes the active card if a user clicks outside the modal layout window */
+    window.onclick = function(event) {
+        if (event.target.classList.contains('blog-modal-overlay')) {
+            event.target.classList.remove('is-active');
+            document.body.style.overflow = '';
+        }
+    }
+    </script>
+
+
+
+    <!-- ==========================================================================
        NEW COMPONENT: INTERACTIVE FAQ DROPDOWN ACCORDION MENUS
     =============================================================================== -->
     <section id="faq" class="faq-section">
@@ -300,33 +368,33 @@
             <div class="faq-accordion-container">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item">
-                    <button class="faq-trigger" onclick="toggleFaq(this)">Where can I check my delivery status? <span class="faq-arrow">&rarr;</span></button>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">What kind of content or services do you provide? <span class="faq-arrow">&rarr;</span></button>
                     <div class="faq-panel">
-                        <p>Delivery tracking links are issued directly by the official merchant fulfillment partner. Please check your purchase confirmation email or contact the seller directly for live logistics tracking details.</p>
+                        <p>We deliver deep-dive investigative journalism, cultural analysis, and fresh social commentary. Our services include narrative brand strategy, custom editorial writing, and perspective-shifting content creation for modern platforms.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="faq-item">
-                    <button class="faq-trigger" onclick="toggleFaq(this)">How do I verify my payment status? <span class="faq-arrow">&rarr;</span></button>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">What can I expect to find in your portfolio? <span class="faq-arrow">&rarr;</span></button>
                     <div class="faq-panel">
-                        <p>All merchant transactional checkouts are processed securely through the external distributor's portal. For payment verifications, billing discrepancies, or official invoice receipts, please log into your account on the retail merchant's website.</p>
+                        <p>Our portfolio showcases high-impact case studies, comprehensive cultural research papers, media strategy breakdowns, and a curated collection of our most viral long-form essays.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="faq-item">
-                    <button class="faq-trigger" onclick="toggleFaq(this)">Where can I view my total order status? <span class="faq-arrow">&rarr;</span></button>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">How often do you publish new blog collections? <span class="faq-arrow">&rarr;</span></button>
                     <div class="faq-panel">
-                        <p>PEACHEE is an editorial lookbook storefront directing traffic to external distributors. Because fulfillment takes place natively on the vendor's platform, your complete order history remains securely hosted on the seller's website.</p>
+                        <p>We release comprehensive new content drops bi-weekly. Each drop features core thematic essays alongside a carefully curated collection of unseen angles on current global trends.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="faq-item">
-                    <button class="faq-trigger" onclick="toggleFaq(this)">My order was cancelled. What should I do? <span class="faq-arrow">&rarr;</span></button>
+                    <button class="faq-trigger" onclick="toggleFaq(this)">Are you open to editorial collaborations or guest features? <span class="faq-arrow">&rarr;</span></button>
                     <div class="faq-panel">
-                        <p>Fulfillment cancellations, item stock reallocations, and payment reversals are handled entirely by the checkout merchant. Please contact the distributor or retail seller directly to resolve immediate cancellation disputes.</p>
+                        <p>Yes. We actively partner with forward-thinking creators, journalists, and brands looking to challenge conventional thinking. Hit the "Let's Talk" button in our navbar to pitch your idea.</p>
                     </div>
                 </div>
             </div>
@@ -400,7 +468,7 @@
         <div class="container footer-flex">
             <!-- Left Side: Copyright and Trademark -->
             <div class="footer-left">
-                <p>&copy; PEACHEE<span class="trademark">TM</span> 2026 by: LogicMinds Technologies, Inc. All Rights Reserved.</p>
+                <p>&copy; BlindSpot<span class="trademark">TM</span> 2026 by: LogicMinds Technologies, Inc. All Rights Reserved.</p>
             </div>
             <!-- Right Side: Clean Text Navigation Links -->
             <div class="footer-right">
@@ -425,16 +493,23 @@
             <div class="about-modal-grid">
                 <!-- Left Column: Big Brand Statement -->
                 <div class="about-modal-header">
-                    <p class="modal-tagline">Our Manifesto</p>
-                    <h2>Designed with Intent.<br>Made to Endure.</h2>
+                    <p class="modal-tagline">The MISSION</p>
+                    <h2>We live in an era of endless scrolling, rapid headlines, and immediate takes. But in the rush to react, the most critical details are often left behind.</h2>
                     <a href="#collection" class="modal-story-link" onclick="toggleAboutModal(false)">Explore the collection &rarr;</a>
                 </div>
                 
                 <!-- Right Column: Premium Text Story Narrative -->
                 <div class="about-modal-story">
-                    <p class="story-lead">At PEACHEE, we reject the noise of temporary trends. We believe firmly in the luxury of less, but better.</p>
-                    <p class="story-body">Every silhouette in our catalog is carefully curated and crafted from sustainable, high-integrity fabrics. Born from a pursuit of minimalist luxury and shared globally, our pieces are tailored for those who look for purpose, appreciate conscious craftsmanship, and dress for a lifetime—not a temporary season.</p>
-                    <p class="story-footer">PEACHEE &copy; 2026. Distributed globally in partnership with verified artisanal ateliers.</p>
+                    <p class="story-lead">BlindSpot was born out of a simple realization: the most fascinating parts of any story are the ones hidden in plain sight. We don’t just report what’s happening—we look where everyone else turns away. Our mission is to illuminate the overlooked, challenge common assumptions, and correct the narrative vision.</p>
+                    <p class="story-body">Why "BlindSpot"?</p>
+                    <p class="story-body">In driving, a blind spot is the area around your vehicle that you cannot directly observe. In psychology, it's a bias you remain completely unaware of. On this page, BlindSpot is your tool to see it all. We serve as a second lens, focusing entirely on the untold angles, the deep-dive context, and the missing perspectives in culture, technology, and modern society.</p>
+                    <p class="story-body">What We Cover</p>
+                    <p class="story-body">The Unseen Angles: Deep dives into popular trends that miss the bigger picture.</p>
+                    <p class="story-body">Cultural BlindSpots: Uncovering shifts in society, media, and human behavior before they hit the mainstream.</p>
+                    <p class="story-body">Fresh Perspectives: Pointed commentary that cuts through the noise of safe, recycled opinions.</p>
+                    <p class="story-body">Our Philosophy</p>
+                    <p class="story-body">We believe that curiosity requires looking twice. If you are tired of surface-level takes, predictable headlines, and echo chambers, you have found your home. Welcome to BlindSpot—where we look closer, think deeper, and find exactly what you've been missing.</p>
+                    <p class="story-footer">BlindSpot &copy; 2026. Created by: Marvin Arrevillaga - Founder</p>
                 </div>
             </div>
         </div>
@@ -471,9 +546,9 @@
             <button class="contact-modal-close" onclick="toggleContactModal(false)">&times;</button>
             
             <div class="contact-modal-header">
-                <p class="modal-tagline">Customer Relations</p>
-                <h2>Contact PEACHEE</h2>
-                <p class="modal-subtext">Send us a detailed message regarding orders, press, or sizing queries. Our team responds within 24 hours.</p>
+                <p class="modal-tagline">Let's TALK</p>
+                <h2>Contact FOUNDER</h2>
+                <p class="modal-subtext">Send us a detailed message about your opinions, suggestions, and feedback. Our team responds within 24 hours.</p>
             </div>
             
             <!-- Formspree Code Layout styled cleanly -->
