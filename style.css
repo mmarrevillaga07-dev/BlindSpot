@@ -379,17 +379,27 @@ body {
     color: #FF9E7D; /* Bright Peach Card Tracker Accent */
     text-transform: uppercase;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
-.card-meta p {
+/* ==========================================================================
+   CAROUSEL CARD TEXT UNIFICATION OVERRIDE
+   ========================================================================== */
+.card-meta p,
+.collection-card p,
+.collection-card text,
+div.card-meta p {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 1.1rem !important; /* Adjusted slightly down so all-caps text fits nicely */
-    font-weight: 700 !important; /* Bold weight matching your navbar buttons */
-    text-transform: uppercase !important; /* Converts project titles to clean ALL-CAPS */
-    letter-spacing: 1.5px !important; /* Adds professional typographic tracking space */
-    color: #FFFFFF;
+    font-size: 0.75rem !important; /* Matches the smaller footprint of Look 9/10 */
+    font-weight: 600 !important; /* Enforces bold typography weight */
+    text-transform: uppercase !important; /* Converts all lowercase variables to clean all-caps */
+    letter-spacing: 2px !important; /* Enforces the signature premium letter-spacing layout gap */
+    color: #FF9E7D !important; /* Locks down the signature bright peach accent branding across all cards */
+    display: block !important;
+    margin: 0 !important;
+    text-align: left !important;
 }
+
 
 /* ==========================================================================
    UPDATED RESPONSIVE CAROUSEL BREAKPOINTS
