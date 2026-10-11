@@ -157,6 +157,9 @@
     
     // Set initial main image
     document.getElementById('mainImage').src = currentProduct.images[0];
+
+    // FORCE TITLE FIX: Overwrites any layout extensions with your clean page title
+    document.title = `${currentProduct.title} - Product Gallery Showcase`;
     
     // Generate thumbnails dynamically
     const thumbRow = document.getElementById('thumbRow');
