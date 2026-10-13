@@ -729,14 +729,14 @@ html {
 /* Style for the link's default, active, and visited states */
 .footer-link, 
 .footer-link:visited {
-    color: #f0f0f0;          /* Off-white color */
+    color: #A0AEC0;          /* Off-white color */
     text-decoration: none;   /* Removes the default underline */
     transition: color 0.2s ease; /* Makes the color change smooth */
 }
 
 /* Style for when a user hovers over the link */
 .footer-link:hover {
-    color: #ffffff;          /* Bright plain white */
+    color: #FF9E7D;          /* Bright plain white */
     text-decoration: underline; /* Optional: adds underline back only on hover */
 }
 
