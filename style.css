@@ -71,6 +71,25 @@ body {
     white-space: nowrap;
 }
 
+/* Style for the blog title container */
+.blog-title {
+    color: #ffffff; /* Assuming your main text color is white */
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+/* Style to create the bloody red background shape */
+.danger-box {
+    background-color: #ff0000; /* Pure, bright bloody red */
+    color: #ffffff;            /* White text inside the red block */
+    padding: 4px 12px;         /* Adds space around the text to create the shape */
+    margin-right: 2px;         /* Tiny gap before the word "Spot" */
+    display: inline-block;     /* Allows padding and shaping to work correctly */
+    font-weight: bold;
+}
+
+
 .nav-links {
     display: flex;
     list-style: none;
