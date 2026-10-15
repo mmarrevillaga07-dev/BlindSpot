@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Place Your Order - PEACHEE</title>
+  <title>Place Your Order - BlindSpot</title>
   <style>
     body { 
       font-family: sans-serif; 
       background-color: #111; 
-      color: white;
+      color: #aaa;
       padding: 40px 20px;
       display: flex;
       justify-content: center;
@@ -100,7 +100,7 @@
 <body>
 
 <div class="form-container">
-  <h2>PEACHEE Order Form</h2>
+  <h2>BlindSpot Order Form</h2>
   
   <!-- Main Product Order Form linked to your Formspree -->
 <form action="https://formspree.io/f/mgavgjlg" method="POST">
@@ -109,47 +109,14 @@
     <div class="form-group">
       <label>Item Selection</label>
       <select id="orderProductSelect" name="Product Look" class="selected-product-box">
-        <option value="1">Casual Lace Ruffle Neck Draped Mini</option>
-        <option value="2">Casual Button Blazer</option>
-        <option value="3">Loose and Slim Casual Blouse</option>
-        <option value="4">Party Red Appliques Asymmetrical Top</option>
-        <option value="5">Look 5</option>
-        <option value="6">Look 6</option>
-        <option value="7">Look 7</option>
-        <option value="8">Look 8</option>
-        <option value="9">Look 9</option>
-        <option value="10">Look 10</option>
+        <option value="1">Progressive Web Apps</option>
+        <option value="2">CxHUB</option>
+        <option value="3">Storefront Landing Page</option>
+        <option value="4">WEB Page</option>
       </select>
     </div>
 
-    <!-- Product Options Row (Size, Color, Pieces) -->
-    <div class="form-row">
-      <div class="form-group">
-        <label>Size</label>
-        <select name="Size" required>
-          <option value="" disabled selected>Size</option>
-          <option value="S">Small</option>
-          <option value="M">Medium</option>
-          <option value="L">Large</option>
-          <optgroup label="Plus Sizes">
-            <option value="XL">Extra Large (XL)</option>
-            <option value="XXL">Double Extra Large (XXL)</option>
-          </optgroup>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Color</label>
-          <input type="text" name="Color" required placeholder="Your preferred color (e.g., Red, Blue, Black)">
-      </div>
-
-      <div class="form-group">
-        <label>Pieces</label>
-        <input type="number" name="Quantity" min="1" max="20" value="1" required>
-      </div>
-    </div>
-
-    <!-- Customer Contact Info -->
+   <!-- Customer Contact Info -->
     <div class="form-group">
       <label>Full Name</label>
       <input type="text" name="Customer Name" required placeholder="Your full name">
