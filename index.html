@@ -274,32 +274,95 @@
         BLOG SECTION: FEATURED HIGHLIGHTS / INTERMEDIARY CONTENT
     ============================================================================-->
     <section id="blog-section" class="highlight-section">
-        <div class="section-container">
-            <span class="section-tagline">FEATURED BLOGS</span>
-            <h2 class="section-heading">Tailored Strategies for High-Growth Ventures</h2>
-        
-            <div class="highlight-content-wrapper">
-            <!-- Left Side Element -->
-                <div class="highlight-block">
-                    <h3>SaaS & Product Scaling</h3>
-                    <p>We craft data-driven acquisition funnels designed to minimize user churn, maximize trial-to-paid conversions, and consistently drive sustainable Monthly Recurring Revenue (MRR) expansion.</p>
-                    <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-saas')">Read Full Article →</a>
-                </div>
-            
-            <!-- Right Side Element -->
-                <div class="highlight-block">
-                    <h3>Conversion Optimization</h3>
-                    <p>From dropshipping storefronts to complex marketing funnels, we run deep behavioral analytics to isolate drop-off zones and transform passive traffic into loyal buyers.</p>
-                    <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-conversion')">Read Full Article →</a>
-                </div>
-            </div>
+    <div class="section-container">
+        <span class="section-tagline">FEATURED BLOGS</span>
+        <h2 class="section-heading">Tailored Strategies for High-Growth Ventures</h2>
+    
+        <!-- 1. ADDED FEATURE: Dropdown container element placed above the grid blocks -->
+        <div class="blog-dropdown-container">
+            <a href="#" id="more-blogs-link" class="blog-link">
+                Jump to Article <span class="arrow">&#9662;</span>
+            </a>
+            <ul id="blogs-menu" class="blog-menu-list"></ul>
         </div>
+
+        <div class="highlight-content-wrapper">
+        <!-- Blog Element 1 -->
+            <div class="highlight-block">
+                <h3>SaaS & Product Scaling</h3>
+                <p>We craft data-driven acquisition funnels designed to minimize user churn, maximize trial-to-paid conversions, and consistently drive sustainable Monthly Recurring Revenue (MRR) expansion.</p>
+                <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-saas')">Read Full Article →</a>
+            </div>
+        
+        <!-- Blog Element 2 -->
+            <div class="highlight-block">
+                <h3>Conversion Optimization</h3>
+                <p>From dropshipping storefronts to complex marketing funnels, we run deep behavioral analytics to isolate drop-off zones and transform passive traffic into loyal buyers.</p>
+                <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-conversion')">Read Full Article →</a>
+            </div>
+
+        <!-- Blog Element 3 -->
+            <div class="highlight-block">
+                <h3>Sales Funnel Strategy</h3>
+                <p>A sales funnel is a structured marketing framework that maps out a potential customer's journey from their first interaction with a brand to the final purchase. It is called a "funnel" because it is wide at the top—where many broad prospects discover the brand—and gradually narrows as uninterested parties drop off, leaving a much smaller group of qualified, paying buyers at the bottom.</p>
+                <a href="javascript:void(0)" class="highlight-read-more" onclick="toggleModal('modal-funnel')">Read Full Article →</a>
+            </div>    
+        </div>
+    </div>
     </section>
+
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const blogLink = document.getElementById('more-blogs-link');
+    const blogMenu = document.getElementById('blogs-menu');
+    
+    // 1. AUTOMATED SCANNING: Targets your unique template class configuration blocks
+    const highlightBlocks = document.querySelectorAll('.highlight-block');
+    
+    highlightBlocks.forEach((block, index) => {
+      // Pull out the text string located directly within the h3 block element
+      const articleTitle = block.querySelector('h3').innerText;
+      
+      // Look up your read more click attribute function targeting your specific modal values
+      const readMoreBtn = block.querySelector('.highlight-read-more');
+      const modalAction = readMoreBtn ? readMoreBtn.getAttribute('onclick') : '';
+
+      // Construct list template links programmatically
+      const listItem = document.createElement('li');
+      const anchorItem = document.createElement('a');
+      
+      anchorItem.href = "javascript:void(0)";
+      anchorItem.innerHTML = `${index + 1}. ${articleTitle}`;
+      
+      // If a modal handler action string exists, map it right into our new dynamic option list item
+      if (modalAction) {
+        anchorItem.setAttribute('onclick', `${modalAction}; document.getElementById('blogs-menu').classList.remove('show-menu');`);
+      }
+      
+      listItem.appendChild(anchorItem);
+      blogMenu.appendChild(listItem);
+    });
+
+    // 2. INTERACTION CONTROLS: Toggles view states open/closed smoothly
+    blogLink.addEventListener('click', function(event) {
+      event.preventDefault(); 
+      blogMenu.classList.toggle('show-menu');
+    });
+
+    // Close view if mouse selections land completely outside active dropdown structures
+    window.addEventListener('click', function(event) {
+      if (!blogLink.contains(event.target) && !blogMenu.contains(event.target)) {
+        blogMenu.classList.remove('show-menu');
+      }
+    });
+  });
+</script>
 
     <!-- ==========================================================================
     MODAL CARD PLATFORMS FOR FULL ARTICLES
     ========================================================================== -->
-    <!-- Left Article Modal Layout -->
+    <!-- Article Modal Layout 1 -->
     <div id="modal-saas" class="blog-modal-overlay">
         <div class="blog-modal-card">
             <button class="modal-close-btn" onclick="toggleModal('modal-saas')">✕</button>
@@ -351,7 +414,7 @@
         </div>
     </div>
 
-    <!-- Right Article Modal Layout -->
+    <!-- Article Modal Layout 2 -->
     <div id="modal-conversion" class="blog-modal-overlay">
         <div class="blog-modal-card">
             <button class="modal-close-btn" onclick="toggleModal('modal-conversion')">✕</button>
@@ -374,6 +437,63 @@
             </div>
         </div>
     </div>
+
+    <!-- Article Modal Layout 3 -->
+    <div id="modal-funnel" class="blog-modal-overlay">
+        <div class="blog-modal-card">
+            <button class="modal-close-btn" onclick="toggleModal('modal-funnel')">✕</button>
+            <div class="modal-scroll-body">
+                <span class="modal-tagline">Sales Funnel Strategy</span>
+                <h2>The Core Stages of a Sales Funnel</h2>
+                <div class="modal-divider"></div>
+                
+                <p class="modal-lead">Most sales funnels follow the traditional AIDA model, which categorizes the customer's psychological journey into four distinct macro-phases.</p>
+                    
+                <p>Awareness (Top of Funnel - TOFU): The prospect learns about your business, product, or service through marketing efforts like social media, paid advertising, blog posts, or search engine visibility.</p>
+                <p>Interest (Middle of Funnel - MOFU): The prospect actively evaluates your brand. They look for solutions to their problems by engaging with deeper content, such as downloading whitepapers, watching webinars, or subscribing to newsletters.</p>
+                <p>Decision (Middle/Bottom of Funnel): The prospect is ready to buy but is weighing specific options. They dive into details like pricing grids, product demonstrations, customer case studies, or competitive comparisons.</p>
+                <p>Action (Bottom of Funnel - BOFU): The prospect completes the transaction, officially becoming a customer. Post-purchase actions often pivot into automated retention strategies, including onboarding emails or customer loyalty rewards.</p>
+
+                <p>To build a highly effective sales funnel, you must design specific marketing assets, content, and conversion strategies for each distinct phase of the customer journey.</p>
+
+                <p>1. Awareness (Top of Funnel - TOFU)</p>
+                    <ul>The goal of this stage is to attract a large volume of qualified traffic to your brand. Potential customers do not know who you are yet, so you must focus on solving their initial problems rather than pitching your product.
+                        <li>Content Types: Educational blog posts, search-optimized articles (SEO), social media videos (TikTok, Reels, YouTube), and targeted paid advertisements.</li>
+                        <li>The Strategy: You analyze your audience's common pain points and create free, valuable content around them. For example, a project management software company might publish an article titled "5 Ways to Stop Missing Project Deadlines."</li>
+                        <li>The Conversion: You want visitors to click through to your website or landing page to consume your free content.</li>
+                    </ul>
+
+                <p>2. Interest & Consideration (Middle of Funnel - MOFU)</p>
+                    <ul>Once prospects discover your brand, you need to capture their contact information so you can build a direct relationship. This is where you convert anonymous traffic into leads.
+                        <li>Content Types: Lead magnets (e.g., free e-books, templates, checklists), webinars, and email newsletters.</li>
+                        <li>The Strategy: You offer a high-value piece of content for free, but request the user's email address or phone number to access it. This transaction forms a digital handshake.</li>
+                        <li>The Conversion: The prospect fills out your web form, indicating they trust your expertise enough to give you access to their inbox.</li>
+                    </ul>
+
+                <p>3. Decision (Middle to Bottom of Funnel)</p>
+                    <ul>At this stage, your leads know they have a problem and are actively looking for the best solution. They are comparing your brand against your competitors, reviewing your pricing, and looking for proof that your product works.
+                        <li>Content Types: Case studies, customer testimonials, free product trials, product comparison pages, and live demonstrations.</li>
+                        <li>The Strategy: You use automated email marketing sequences to nurture your leads. You send them success stories of past clients and address common objections (such as price, setup time, or feature limitations).</li>
+                        <li>The Conversion: The lead requests a custom quote, adds an item to their shopping cart, or books a sales consultation call.</li>
+                    </ul>
+
+                <p>4. Action & Retention (Bottom of Funnel - BOFU)</p>
+                    <ul>This is the final destination of the initial funnel. The prospect is fully convinced and ready to commit financially.
+                        <li>Content Types: Smooth checkout pages, onboarding emails, up-sell/cross-sell offers, and customer support documentation.</li>
+                        <li>The Strategy: You make the purchasing process as frictionless as possible. Once the sale is complete, you immediately transition them into an onboarding sequence to ensure they get value from their purchase.</li>
+                        <li>The Conversion: The customer inputs their payment details and completes the transaction.</li>
+                    </ul>
+
+                <p>Finding and Fixing Funnel "Leaks"</p>
+                    <ul>A funnel works best when you track how many people pass from one stage to the next. By measuring your conversion rates, you can instantly spot where your marketing is failing:
+                        <li>High Awareness, Low Interest: Thousands of people visit your blog, but nobody downloads your free e-book. Fix: Your lead magnet is not relevant, or your signup form is too complicated.</li>
+                        <li>High Interest, Low Decision: Hundreds of people download your e-book, but nobody signs up for a free trial. Fix: Your automated email follow-up sequence isn't doing enough to prove the value of your actual product.</li>
+                        <li>High Decision, Low Action: People sign up for trials or add items to their carts, but never buy. Fix: Your checkout page is confusing, your pricing is unclear, or you need to send a shopping cart abandonment email.</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
 
     <script>
     function toggleModal(modalId) {
