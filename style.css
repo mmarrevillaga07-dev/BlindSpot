@@ -1523,6 +1523,7 @@ a.flash-wrapper,
     display: grid; /* Switched from flex to grid */
     grid-template-columns: repeat(2, 1fr); /* Generates 2 equal-width columns side-by-side */
     gap: 20px; /* Spacing between the left/right and top/bottom items */
+    align-items: start;
 }
 
 .faq-item {
