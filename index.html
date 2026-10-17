@@ -336,47 +336,99 @@
     const blogLink = document.getElementById('more-blogs-link');
     const blogMenu = document.getElementById('blogs-menu');
     
-    // 1. AUTOMATED SCANNING: Targets your unique template class configuration blocks
+    // 1. AUTOMATED SCANNING & INITIAL SETUP
     const highlightBlocks = document.querySelectorAll('.highlight-block');
     
+    // Store data from all blocks into a structural memory array before modifying visibility
+    const articlesData = [];
+    
     highlightBlocks.forEach((block, index) => {
-      // Pull out the text string located directly within the h3 block element
-      const articleTitle = block.querySelector('h3').innerText;
-      
-      // Look up your read more click attribute function targeting your specific modal values
+      const titleElement = block.querySelector('h3');
+      // Pull all paragraph text formatting strings safely from the text container elements
+      const paragraphHTML = Array.from(block.querySelectorAll('p')).map(p => p.outerHTML).join('');
       const readMoreBtn = block.querySelector('.highlight-read-more');
       const modalAction = readMoreBtn ? readMoreBtn.getAttribute('onclick') : '';
 
-      // Construct list template links programmatically
+      articlesData.push({
+        title: titleElement ? titleElement.innerText : '',
+        contentHTML: paragraphHTML,
+        modalAction: modalAction
+      });
+
+      // Layout rule configuration: Hide everything after the first two initial elements
+      if (index >= 2) {
+        block.classList.add('hidden');
+      }
+    });
+
+    // 2. DYNAMIC DROPDOWN MENU GENERATION
+    articlesData.forEach((article, index) => {
       const listItem = document.createElement('li');
       const anchorItem = document.createElement('a');
       
       anchorItem.href = "javascript:void(0)";
-      anchorItem.innerHTML = `${index + 1}. ${articleTitle}`;
+      anchorItem.innerHTML = `${index + 1}. ${article.title}`;
       
-      // If a modal handler action string exists, map it right into our new dynamic option list item
-      if (modalAction) {
-        anchorItem.setAttribute('onclick', `${modalAction}; document.getElementById('blogs-menu').classList.remove('show-menu');`);
-      }
+      // ACTION: Click handler modifies what is currently showing on the page canvas layout
+      anchorItem.addEventListener('click', function() {
+        // Close dropdown window panel
+        blogMenu.classList.remove('show-menu');
+        
+        // If the user selects one of the first two articles, restore original setup state view
+        if (index < 2) {
+          highlightBlocks[0].classList.remove('hidden');
+          highlightBlocks[1].classList.remove('hidden');
+          
+          // Revert slot two back to its baseline default configuration data values
+          updateBlockDisplay(highlightBlocks[1], articlesData[1]);
+        } else {
+          // Keep block 1 visible, hide block 2, and dynamically populate slot 3/4 content inside it
+          highlightBlocks[0].classList.remove('hidden');
+          highlightBlocks[1].classList.remove('hidden');
+          
+          // Overwrite values on block two seamlessly
+          updateBlockDisplay(highlightBlocks[1], article);
+        }
+      });
       
       listItem.appendChild(anchorItem);
       blogMenu.appendChild(listItem);
     });
 
-    // 2. INTERACTION CONTROLS: Toggles view states open/closed smoothly
+    // HELPER FUNCTION: Injects dynamic textual data updates safely right into target display elements
+    function updateBlockDisplay(targetBlock, dataObject) {
+      // Update Heading text title values
+      targetBlock.querySelector('h3').innerText = dataObject.title;
+      
+      // Wipe old text elements clear and append incoming markup parameters cleanly
+      const oldParagraphs = targetBlock.querySelectorAll('p');
+      oldParagraphs.forEach(p => p.remove());
+      
+      const heading = targetBlock.querySelector('h3');
+      heading.insertAdjacentHTML('afterend', dataObject.contentHTML);
+      
+      // Update read-more trigger bindings action click functionality paths 
+      const readMoreBtn = targetBlock.querySelector('.highlight-read-more');
+      if (readMoreBtn && dataObject.modalAction) {
+        readMoreBtn.setAttribute('onclick', dataObject.modalAction);
+      }
+    }
+
+    // 3. INTERACTION CONTROLS: Dropdown view actions
     blogLink.addEventListener('click', function(event) {
       event.preventDefault(); 
       blogMenu.classList.toggle('show-menu');
     });
 
-    // Close view if mouse selections land completely outside active dropdown structures
     window.addEventListener('click', function(event) {
       if (!blogLink.contains(event.target) && !blogMenu.contains(event.target)) {
+        blogMenu.classList.remove('remove-menu');
         blogMenu.classList.remove('show-menu');
       }
     });
   });
 </script>
+
 
     <!-- ==========================================================================
     MODAL CARD PLATFORMS FOR FULL ARTICLES

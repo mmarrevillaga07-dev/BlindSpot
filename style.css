@@ -731,6 +731,23 @@ html {
   display: block;
 }
 
+/* Hide blocks by default when they have the hidden class */
+.highlight-content-wrapper .highlight-block.hidden {
+    display: none !important;
+}
+
+/* Ensure the layout looks clean with exactly two items */
+.highlight-content-wrapper {
+    display: flex;
+    gap: 20px; /* Adjust based on your current styling */
+    flex-wrap: wrap;
+}
+
+.highlight-block {
+    flex: 1;
+    min-width: 280px; /* Prevents columns from shrinking too small */
+}
+
 /* ==========================================================================
     PREMIUM ARTICLE MODAL CARD STYLES
    ========================================================================== */
