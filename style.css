@@ -184,8 +184,19 @@ body {
     width: 100%;
     height: 550px;
     object-fit: cover;
-    filter: brightness(0.9) contrast(1.02);
+    filter: brightness(0.9) contrast(1.02)
 }
+
+.hero-image {
+  /* This creates a smooth fade out at the bottom of your image */
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+  
+  /* Optional: Ensures your image scales nicely inside the hero section */
+  max-width: 100%;
+  height: auto;
+}
+
 /* Container spacing */
   .hero-socials {
   display: flex;
