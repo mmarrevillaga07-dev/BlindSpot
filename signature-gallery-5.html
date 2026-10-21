@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marketing Funnel - Gallery</title>
+  <style>
+    body { 
+      font-family: sans-serif; 
+      background-color: #111; /* Dark background to make photos pop */
+      color: #aaa;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 { margin-bottom: 20px; font-size: 1.8rem; }
+    
+    /* Main Large Display Image */
+    .main-display {
+      max-width: 600px;
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      background: #222;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Thumbnail Container */
+    .thumbnail-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .thumb {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.6;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .thumb:hover, .active {
+      opacity: 1;
+      border-color: #FF9E7D; /* Matches your green order button */
+    }
+    
+    .back-btn {
+      margin-top: 30px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-btn:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <h1>Marketing Funnel</h1>
+  <!-- Main View -->
+  <img id="mainImage" class="main-display" src="assets/signature-image-5.png" alt="Product Main View">
+
+  <!-- Clickable Thumbnails -->
+  <div class="thumbnail-row">
+    <img class="thumb active" src="assets/signature-image-5.png" onclick="switchImage(this)">
+    <img class="thumb" src="assets/signature-image-5a.png" onclick="switchImage(this)">
+    <img class="thumb" src="assets/signature-image-5b.png" onclick="switchImage(this)">
+    <img class="thumb" src="assets/signature-image-5c.png" onclick="switchImage(this)">
+    <img class="thumb" src="assets/signature-image-5d.png" onclick="switchImage(this)">
+  </div>
+
+  <div class="product-description">
+    <p>High-Converting Marketing Funnels-as-a-Service (FaaS)</p>
+
+    <p>Our Marketing Funnel-as-a-Service delivers an end-to-end, fully automated customer acquisition engine designed to transform cold traffic into paying customers. Unlike static websites that overwhelm visitors with choices, our custom-engineered funnels provide a single, high-focus path with zero distractions—guaranteeing maximize lead capture and sales conversion rates.</p>
+
+    <p>Structural Breakdown: What Is Included</p>
+    <p>[Traffic Source] ➔ 📄 Opt-In Page ➔ 📩 Cloud Automation ➔ 💰 Offer Page ➔ 💳 Secure Checkout</p>
+
+    <p>1. Top of Funnel (TOFU): The Lead Capture Engine (index.html)</p>
+        <ul>Purpose:<li>Grab user attention instantly and convert cold traffic into qualified leads.</li></ul>
+        <ul>Deliverables:<li>A hyper-optimized opt-in landing page featuring a high-converting headline layout, minimalist distraction-free design, and a performance form wrapper capturing Name, Email, and Phone Number.</li></ul>
+        <ul>Lead Magnet Integration:<li>Seamless routing of your high-value digital asset (Free Guide, Blueprint, or Video Course) to hook your ideal demographic.</li></ul>
+
+
+    <p>2. Cloud Data Sync & Security Automation (The Funnel Backend)</p>
+        <ul>Purpose:<li>Seamless lead tracking, tokenization, and administrative management.</li></ul>
+        <ul>Deliverables:<li>Built-in integration bypassing third-party platform limitations.</li></ul>
+        <ul>Automated Cloud Sheet Logging:<li>Real-time data parsing that pulls customer profiles natively into a secure data grid.</li></ul>
+        <ul>Dynamic Token Generation:<li>Automated 16-character secure access codes generated per lead to facilitate system logins, membership gating, or order verification.</li></ul>
+
+    <p>3. Middle & Bottom of Funnel (MOFU/BOFU): Conversion & Fulfillment</p>
+        <ul>Sales Page (offer.html):<li>A psychological conversion layout featuring problem-agitation-solution styling, value stacks, and strategic calls-to-action (CTAs).</li></ul>
+        <ul>Checkout Windows (checkout.html):<li>Streamlined order placement scripts engineered to suppress cart abandonment.</li></ul>
+        <ul>Secure Delivery (thankyou.html): <li> Automated target routing instantly loading digital access upon verified sign-ups or payments.</li></ul>
+
+    <p></p>
+    <p>Why Businesses Choose Us</p>
+
+        <ul>Zero Distractions, Maximum Profit:<li>Traditional websites have high bounce rates because of complex navigation menus. Our funnels have one clear action path, lifting conversions by 20% to 40% compared to standard sites.</li></ul>
+        <ul>Ultra-Fast Performance & Clean Code:<li>Built from scratch using native web files—no bloated plug-ins, heavy page builders, or slow loading times that hurt mobile conversions.</li></ul>
+        <ul>Automated Background Operations:<li>Fully automated infrastructure. Leads stream continuously into your workspace database while users move automatically through your offer workflow on autopilot.</li></ul>
+        <ul>Total Code Ownership & Zero Platform Fees:<li>Hosted completely on scalable cloud infrastructure with no expensive monthly recurring subscriptions required to keep your sales pipelines active.</li></ul>
+
+    <p></p>
+    <p>Service Deliverables Checklist & Technical Roadmap</p>
+
+        <ul>PHASE:<li>Phase 1</li></ul>
+        <ul>MILES DESCRIPTION:<li>Wireframing & Responsive Coding</li></ul>
+        <ul>OBJECTIVE:<li>Craft index.html and style.css tailored for perfect desktop and mobile cross-browser compatibility.</li></ul>
+
+        <ul>PHASE:<li>Phase 2</li></ul>
+        <ul>MILES DESCRIPTION:<li>Backend API & Form Interception</li></ul>
+        <ul>OBJECTIVE:<li>Integrate background form endpoints to bypass intrusive validation screens, routing leads directly to your custom offer pages.</li></ul>
+
+        <ul>PHASE:<li>Phase 3</li></ul>
+        <ul>MILES DESCRIPTION:<li>Cloud Database Setup & Triggers</li></ul>
+        <ul>OBJECTIVE:<li>Program serverless background triggers to extract metadata, record entries, and issue access tokens.</li></ul>
+
+        <ul>PHASE:<li>Phase 4</li></ul>
+        <ul>MILES DESCRIPTION:<li>Deployment & Hard Optimization</li></ul>
+        <ul>OBJECTIVE:<li>Launch live production branches using Git version control and execute hard system refreshes (Ctrl + F5) for testing.</li></ul>
+  </div>
+
+  <a href="javascript:window.close();" class="back-btn">← Close Gallery Tab</a>
+
+<script>
+  function switchImage(element) {
+    // 1. Change the main display source to match clicked thumbnail
+    document.getElementById('mainImage').src = element.src;
+    
+    // 2. Remove 'active' class from all thumbnails
+    let thumbs = document.getElementsByClassName('thumb');
+    for (let i = 0; i < thumbs.length; i++) {
+      thumbs[i].classList.remove('active');
+    }
+    
+    // 3. Add 'active' class to the clicked thumbnail
+    element.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
